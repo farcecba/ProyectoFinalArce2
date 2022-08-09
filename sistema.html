@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="images/logoi.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body id="body">
+    <header class="container-fluid bg-dark text-white">
+        <div class="row d-flex-fill">
+            <div class="col-md-11">
+                <h1 class="animate__animated animate__bounceInDown">Infotime</h1>
+                <p class="animate__animated animate__slideInRight"><em>Herramientas para tu negocio comercial</em></p>
+            </div>
+            <div class="col-md-1 container-fluid d-flex align-items-center d-flex justify-content-center p-0">
+            <img src="images/logoi.jpg" alt="Logo" width="60px" class="rounded">
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul class="container-fluid nav bg-success justify-content-center">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="sistema.html">Sistema</a></li>
+        </ul>
+    </nav>
+    <main class="container-fluid">
+        <section class="container-fluid">
+            <div style="padding-bottom: 50px; padding-top: 25px;">
+                <h4>Bienvenido a la versión online y gratuita del sistema contable.</h4>
+                <br>En la misma, contará con 5 cuentas precargadas (no pueden eliminarse) y podrá ir agregando a gusto las que desee. Luego, utilizando cualquiera de ellas, podrá registrar asientos contables, visualizando los mismos en esta misma página y pudiendo descargar la base para utilizarla en Excel, libre de inconsistencias como cuentas inexistentes, campos vacíos, texto donde debieran ir números, etc.
+                <br>Las cuentas que utilice se guardarán para un próximo uso, NO así con los asientos, por lo que no olvide exportarlos si no quiere perder su trabajo.
+                La versión premium, que podrá adquirir en preventa por el módico precio de 224.190 créditos, sí permitirá guardar los asientos en la nube y contará con aplicación de escritorio y para dispositivos móviles.
+                <div>En caso que le sea de utilidad, dejamos el tipo de cambio vendedor del dólar actual (en pesos argentinos):</div>
+                <div id="dolar"></div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-md-2 p-3 mb-2 bg-success text-white">
+              <div><b>Ingrese la cuenta a añadir</b></div>
+              <form id="formcuenta">
+                <input type="number" placeholder = "Cuenta">
+                <button type="submit">Añadir cuenta</button>
+              </form>
+            </div>
+            <div class="col-md-3 p-3 mb-2 bg-success text-white">
+                <div class>
+                    <b>Ingrese el asiento a registrar</b>
+                    <form id="formasiento">
+                        <input type="number" placeholder = "Cuenta">
+                        <input type="text" placeholder = "Servicio">
+                        <input type="number" placeholder = "Importe">
+                        <button type="submit">Agregar asiento</button>
+                    </form>
+                </div>
+                <div>
+                    <b>Ingrese el N° de asiento a eliminar</b>
+                    <form id="elimasiento">
+                        <input type="number" placeholder = "N de asiento">
+                        <button type="submit">Eliminar asiento</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2" id="cuentasdiv"></div>
+            <div class="col-md-4 p-3 mb-2 bg-warning text-dark">
+                <div id="asientosdiv"></div>
+                <button id="exportar">Exportar a Excel</button>
+            </div>
+        <div class="col-md-2" id="totalizador"></div>
+      </section>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="js/eventos.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+</body>
+</html>
